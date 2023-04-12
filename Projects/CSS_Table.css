@@ -1,0 +1,16 @@
+table {
+	border: 1px gold;
+	}
+td:hover {
+	background-color: purple;
+	color: gold;
+	}
+tr, th {
+	background-color: purple;
+	color: gold;
+	}
+tr, td {
+	background-color: purple;
+	color: gold;
+	}
+	
