@@ -4,6 +4,7 @@
 		<meta charset="utf=8">
 		<title>NBA Playoffs</title>
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
+		<script src="./JS/one_page_website.js"></script>
 	</head>
 	<body>
 	
@@ -36,9 +37,9 @@
 				<div>
 				
 					<!--PHOTO-CONTAINER 1 -->
-					<div>
-						<div>
-							<img src="./NBA_Images/NBA_1.jpg" alt="">
+					<div class="row">
+						<div class="column">
+							<img src="./NBA_Images/NBA_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Will he ever slow down? Come watch Lebron James and the LA Lakers in their first playoff game!</p>
@@ -49,8 +50,8 @@
 					
 					<!--PHOTO-CONTAINER 2 -->
 					<div>
-						<div>
-							<img src="./NBA_Images/NBA_2.jpg" alt="">
+						<div class="column">
+							<img src="./NBA_Images/NBA_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Giannis and the Bucks aim to get their 2nd title in the last 3 years.</p>
@@ -58,7 +59,37 @@
 						</div>
 					</div>
 					<!--END PHOTO-CONTAINER 2 -->
+					<!-- The Modal/Lightbox -->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
 					
+						<div class="mySlides">
+							<div class="numbertext">1 / 2</div>
+							<img src="./NBA_Images/NBA_1.jpg" style="width:100%">
+						</div>
+					
+						<div class="mySlides">
+							<div class="numbertext">2 / 2</div>
+							<img src="./NBA_Images/NBA_2.jpg" style="width:100%">
+						</div>
+						 <!-- Next/previous controls -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!-- Caption text -->
+						<div class="caption-container">
+						<p id="caption"></p>
+						</div>
+
+						<!-- Thumbnail image controls -->
+						<div class="column">
+						<img class="demo" src="./NBA_Images/NBA_1.jpg" onclick="currentSlide(1)" alt="Nature">
+						</div>
+
+						<div class="column">
+						<img class="demo" src="./NBA_Images/NBA_1.jpg" onclick="currentSlide(2)" alt="Snow">
+						</div>	
 				</div>
 			</div>
 			</section>
